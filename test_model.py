@@ -21,4 +21,5 @@ def test_model_score():
     latest_score = model_scores[-1]['score']
     
     # Compare the latest score with the current score
+    # This test ensures our model doesn't get worse over time
     assert score >= latest_score, f"Current model score {score} is worse than the latest score {latest_score}"
