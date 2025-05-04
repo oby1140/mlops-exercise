@@ -2,10 +2,12 @@ import os
 import json
 import app
 
+# Test if model file is created
 def test_model_file_created():
     app.main()  # Assuming the main function encapsulates the training logic
     assert os.path.exists('models/model.pkl')
 
+# Test model performance and version comparison
 def test_model_score():
     score = app.main()  # Assuming the main function returns the score
     assert isinstance(score, float)
